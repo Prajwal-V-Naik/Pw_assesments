@@ -11,6 +11,10 @@ allCrafts.addEventListener("click", () => {
     .then(response => response.json())
     .then(data => {
       displayHere.innerHTML = '';
+      let head =  document.createElement('h1');
+      head.textContent = 'Spacecrafts';
+      head.style.marginBottom = '1rem';
+      head.style.textDecoration = 'underline';
       let spacecrafts = data.spacecrafts;
       let spacecraftsList = document.createElement('div');
       spacecraftsList.classList.add('grid_col');
@@ -19,6 +23,7 @@ allCrafts.addEventListener("click", () => {
         listitems.textContent = spacecraft.name;
         spacecraftsList.append(listitems);
       });
+      displayHere.append(head);
       displayHere.append(spacecraftsList);
     })
     .catch(error => console.log(error));
@@ -30,6 +35,10 @@ allRockets.addEventListener("click", () => {
       .then(response => response.json())
       .then(data => {
         displayHere.innerHTML = '';
+        let head =  document.createElement('h1');
+        head.textContent = 'Rockets';
+        head.style.marginBottom = '1rem';
+        head.style.textDecoration = 'underline';
         let launchers = data.launchers;
         let launchersList = document.createElement('div');
         launchersList.classList.add('grid_col');
@@ -38,6 +47,7 @@ allRockets.addEventListener("click", () => {
           listitems.textContent = launcher.id;
           launchersList.append(listitems);
         });
+        displayHere.append(head);
         displayHere.append(launchersList);
       })
       .catch(error => console.log(error));
@@ -49,6 +59,10 @@ allCenters.addEventListener("click", () => {
       .then(response => response.json())
       .then(data => {
         displayHere.innerHTML = '';
+        let head =  document.createElement('h1');
+        head.textContent = 'Centers';
+        head.style.marginBottom = '1rem';
+        head.style.textDecoration = 'underline';
         let centres = data.centres;
         let centresList = document.createElement('div');
         centresList.classList.add('grid_col_2');
@@ -57,6 +71,7 @@ allCenters.addEventListener("click", () => {
           listitems.textContent = `${centre.name} at ${centre.State}`;
           centresList.append(listitems);
         });
+        displayHere.append(head);
         displayHere.append(centresList);
       })
       .catch(error => console.log(error));
