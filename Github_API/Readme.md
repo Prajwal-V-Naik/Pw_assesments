@@ -11,7 +11,7 @@ Those data includes
 *I used promises all to fetch multiple api link at once and appended all data to deferent elements*
 
 
-site link:
+site link:[link](https://git-profile-pajju-dev.netlify.app/)
 
 
 **only for mobile and laptop screens**

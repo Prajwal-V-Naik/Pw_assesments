@@ -2,7 +2,7 @@
 
 - specially there is a hamburger for mobile navigation
 
-site link:
+site link: [link](https://discord-clone-pajju-dev.netlify.app/)
 
 
 **only for mobile and laptop screens**
