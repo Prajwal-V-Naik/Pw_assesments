@@ -10,6 +10,7 @@ allCrafts.addEventListener("click", () => {
   fetch("https://isro.vercel.app/api/spacecrafts")
     .then(response => response.json())
     .then(data => {
+      displayHere.innerHTML = '';
       let spacecrafts = data.spacecrafts;
       let spacecraftsList = document.createElement('div');
       spacecraftsList.classList.add('grid_col');
@@ -28,6 +29,7 @@ allRockets.addEventListener("click", () => {
     fetch("https://isro.vercel.app/api/launchers")
       .then(response => response.json())
       .then(data => {
+        displayHere.innerHTML = '';
         let launchers = data.launchers;
         let launchersList = document.createElement('div');
         launchersList.classList.add('grid_col');
@@ -46,6 +48,7 @@ allCenters.addEventListener("click", () => {
     fetch("https://isro.vercel.app/api/centres")
       .then(response => response.json())
       .then(data => {
+        displayHere.innerHTML = '';
         let centres = data.centres;
         let centresList = document.createElement('div');
         centresList.classList.add('grid_col_2');
@@ -72,6 +75,7 @@ function searchState() {
     fetch("https://isro.vercel.app/api/centres")
       .then(response => response.json())
       .then(data => {
+        displayHere.innerHTML = '';
         let centres = data.centres;
         let centresList = "<ul>";
         centres.forEach(centre => {
@@ -106,6 +110,7 @@ function searchCountry(){
     fetch("https://isro.vercel.app/api/customer_satellites")
     .then(response => response.json())
     .then(data => {
+        displayHere.innerHTML = '';
         let details = data.customer_satellites;
         let centresList = document.createElement('div');
         centresList.style.display = 'flex';
