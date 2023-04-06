@@ -1,0 +1,27 @@
+.menu-container {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 4rem);
+    background-color: #ffffff;
+    z-index: 100;
+    padding: 2rem;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-list li {
+    margin-bottom: 1rem;
+  }
+  
+  .menu-list a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  

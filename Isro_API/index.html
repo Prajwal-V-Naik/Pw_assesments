@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ISRO-API</title>
+</head>
+<body>
+    <nav class="navigation">
+        <ul class="list">
+            <li id="allCrafts" class="list-items white">Spacecrafts</li>
+            <li id="allRockets" class="list-items white">Rockets</li>
+            <li id="allCenters" class="list-items white">Centers</li>
+            <li><input type="text" name="state" id="search_by_state" placeholder="Enter stateName" class="list-items"></li>
+            <li><button onclick="searchState()" class="list-items">Search_By_State</button></li>
+            <li><input type="text" name="state" id="search_by_Country" placeholder="Enter CountryName" class="list-items"></li>
+            <li><button onclick="searchCountry()" class="list-items">Search_By_Country</button></li>
+        </ul>
+    </nav>
+    <main id="displayHere" class="display">
+
+    </main>
+</body>
+<script src="index.js"></script>
+</html>
