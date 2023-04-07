@@ -15,6 +15,7 @@ function getProfile() {
     Promise.all([fetch(profileUrl), fetch(followersUrl)])
     .then(responses => Promise.all(responses.map(response => response.json())))
     .then(data => {
+        followerslist.innerHTML = '';
         const profileData = data[0];
         const followersData = data[1];
         
