@@ -20,9 +20,12 @@ function getProfile() {
         const followersData = data[1];
         
         console.log(profileData)
+        if(profileData.message == 'Not Found'){
+          alert("404")
+        }
         profilePic.src = profileData.avatar_url;
-        userid.textContent = profileData.name || username;
-        bio.textContent = profileData.bio || "";
+        userid.textContent = profileData.name;
+        bio.textContent = profileData.bio;
         repo.textContent = `repositories = ${profileData.public_repos}`;
         
         followersData.map(follower => {
@@ -31,5 +34,5 @@ function getProfile() {
           followerslist.append(list);
         });
       })
-    .catch(error => console.error(error));
+    .catch(error => console.log(error));
 }

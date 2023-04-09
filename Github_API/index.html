@@ -5,24 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
   <title>Profile Viewer</title>
 </head>
-<body>
-    <h1 class="text-center font-semibold text-3xl underline xl:text-6xl">GitHub Profile Viewer</h1>
-    <div class="flex flex-col justify-center items-center gap-3 xl:mt-5 xl:text-xl">
-      <label for="username" class="font-semibold">Enter a GitHub username:</label>
-      <input type="text" id="username" name="username" placeholder="enter name" class="border-2 border-rose-500 rounded-md">
-      <button onclick="getProfile()" class="px-5 py-2 bg-gray-200 rounded-lg">Get Profile</button>
-    </div>
-    <div class="flex flex-col justify-center items-center gap-4 mt-4 py-4">
-      <h1 id="userid" class="text-center font-semibold text-xl xl:text-2xl"></h1>
-      <img id="profilePic" class="rounded-full w-28 xl:w-36">
-      <p id="bio" class="text-lg xl:text-xl"></p>
-      <p id="repo" class="text-xl xl:text-2xl"></p>
-    </div>
-    <div class="flex flex-col justify-center items-center gap-4 mt-4 py-4">
-      <h1 class="text-center font-semibold text-xl underline xl:text-3xl">Followers</h1>
-      <div id="followerslist" class="flex flex-col justify-center items-start gap-1 xl:text-xl"></div>
+<body class="bg-[#011627] box-border px-3 py-4">
+    <h1 class="text-center font-semibold text-3xl xl:text-3xl head-text text-slate-300">GitHub Profile Viewer</h1>
+    <div class="grid grid-cols-2 gap-2">
+      <div class="flex flex-col justify-center items-center gap-3 xl:mt-5 xl:text-xl border-2 col-span-2 py-2">
+        <label for="username" class="font-semibold text-slate-400">Enter a GitHub username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter Name..." class=" text-slate-300 rounded-md bg-transparent outline-none">
+        <button onclick="getProfile()" class="px-5 py-2 bg-gray-200 rounded-lg">Get Profile</button>
+      </div>
+      <div class="flex flex-col justify-center items-center gap-4 mt-4 py-4 border">
+        <h1 id="userid" class="text-center font-semibold text-xl xl:text-2xl"></h1>
+        <img id="profilePic" class="rounded-full w-28 xl:w-36">
+        <p id="bio" class="text-lg xl:text-xl"></p>
+        <p id="repo" class="text-xl xl:text-2xl"></p>
+      </div>
+      <div class="flex flex-col justify-center items-center gap-4 mt-4 py-4 border">
+        <h1 class="text-center font-semibold text-xl underline xl:text-3xl">Followers</h1>
+        <div id="followerslist" class="flex flex-col justify-center items-start gap-1 xl:text-xl"></div>
+      </div>
     </div>
 </body>
 <script src="index.js"></script>
