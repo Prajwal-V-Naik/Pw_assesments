@@ -3,3 +3,10 @@
 .head-text{
 font-family: 'Press Start 2P', cursive;
 }
+
+.js_heads{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    color: gray;
+    text-decoration: underline;
+}

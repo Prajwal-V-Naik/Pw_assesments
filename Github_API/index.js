@@ -15,14 +15,24 @@ function getProfile() {
     Promise.all([fetch(profileUrl), fetch(followersUrl)])
     .then(responses => Promise.all(responses.map(response => response.json())))
     .then(data => {
-        followerslist.innerHTML = '';
+        
         const profileData = data[0];
         const followersData = data[1];
         
         console.log(profileData)
         if(profileData.message == 'Not Found'){
-          alert("404")
+          let profile = document.getElementById("profile");
+          let followers = document.getElementById("followers");
+          let head1 = document.createElement("h1");
+          head1.textContent = '404';
+          head1.classList.add('js_heads');
+          let head2 = document.createElement("h1");
+          head2.textContent = '404';
+          head2.classList.add('js_heads');
+          profile.append(head1);
+          followers.append(head2);
         }
+        else{
         profilePic.src = profileData.avatar_url;
         userid.textContent = profileData.name;
         bio.textContent = profileData.bio;
@@ -33,6 +43,7 @@ function getProfile() {
           list.textContent = follower.login;
           followerslist.append(list);
         });
+        }
       })
     .catch(error => console.log(error));
 }
