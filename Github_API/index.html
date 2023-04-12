@@ -10,17 +10,20 @@
   <link rel="stylesheet" href="style.css">
   <title>Profile Viewer</title>
 </head>
-<body class="bg-[#011627] box-border px-3 py-4">
+<body class="bg-[#011627] box-border px-3 py-4 text-slate-300">
     <h1 class="text-center font-semibold text-3xl xl:text-3xl head-text text-slate-300">GitHub Profile Viewer</h1>
-    <div class="grid grid-cols-2 gap-2">
+    <div class="flex flex-col xl:grid xl:grid-cols-2 gap-2 mx-1 my-2 xl:mx-44">
       <div class="flex flex-col justify-center items-center gap-3 xl:mt-5 xl:text-xl border-2 col-span-2 py-3">
         <label for="username" class="font-semibold text-slate-400">Enter a GitHub username:</label>
         <input type="text" id="username" name="username" placeholder="Enter Name..." class=" text-slate-300 rounded-md bg-transparent outline-none">
-        <button onclick="getProfile()" class="px-5 py-2 bg-gray-200 rounded-lg"><ion-icon name="search-outline"></ion-icon></button>
+        <button onclick="getProfile()" class="px-5 py-2 bg-gray-200 rounded-full text-slate-900"><ion-icon name="search-outline"></ion-icon></button>
+        <!-- <div id="not-found" class="hidden">
+          <h1>404</h1>
+        </div> -->
       </div>
-      <div class="flex flex-col justify-center items-center gap-4 mt-4 py-4 border" id="profile">
+      <div class="hidden flex flex-col justify-center items-center gap-4 mt-4 py-4 border" id="profile">
         <h1 id="userid" class="text-center font-semibold text-xl xl:text-2xl"></h1>
-        <img id="profilePic" class="rounded-full w-28 xl:w-36">
+        <img id="profilePic" class="rounded-full w-28 xl:w-36 border-2 border-green-400">
         <p id="bio" class="text-lg xl:text-xl"></p>
         <p id="repo" class="text-xl xl:text-2xl"></p>
       </div>
