@@ -1,10 +1,12 @@
 function getProfile() {
-  // id's
+  // variables
   let userid = document.getElementById('userid');
   let profilePic = document.getElementById('profilePic');
   let bio = document.getElementById('bio');
   let repo = document.getElementById('repo');
   let followerslist = document.getElementById('followerslist');
+  let profile = document.getElementById("profile");
+  let followers = document.getElementById("followers");
 
   // user entered name
   const username = document.getElementById("username").value;
@@ -22,8 +24,6 @@ function getProfile() {
 
     console.log(profileData)
     if (profileData.message != 'Not Found') {
-      let profile = document.getElementById("profile");
-      profile.classList.toggle("hidden")
       profilePic.src = profileData.avatar_url;
       userid.textContent = profileData.name;
       bio.textContent = profileData.bio;
@@ -36,8 +36,6 @@ function getProfile() {
       });
     }
     else {
-      let profile = document.getElementById("profile");
-      let followers = document.getElementById("followers");
       let head1 = document.createElement("h1");
       head1.textContent = '404';
       head1.classList.add('js_heads');
